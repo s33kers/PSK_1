@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="us.martink.mybatis.dao.UniversityMapper">
+    <resultMap id="BaseResultMap" type="us.martink.mybatis.entities.University">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="title" jdbcType="VARCHAR" property="title"/>
+    </resultMap>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+        DELETE FROM psk_1.university
+        WHERE id = #{id,jdbcType=INTEGER}
+    </delete>
+
+    <insert id="insert" keyColumn="id" keyProperty="id" parameterType="us.martink.mybatis.entities.University" useGeneratedKeys="true">
+        INSERT INTO psk_1.university (title)
+        VALUES (#{title,jdbcType=VARCHAR})
+    </insert>
+
+    <update id="updateByPrimaryKey" parameterType="us.martink.mybatis.entities.University">
+        UPDATE psk_1.university
+        SET title = #{title,jdbcType=VARCHAR}
+        WHERE id = #{id,jdbcType=INTEGER}
+    </update>
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        SELECT
+            id,
+            title
+        FROM psk_1.university
+        WHERE id = #{id,jdbcType=INTEGER}
+    </select>
+
+    <select id="selectAll" resultMap="BaseResultMap">
+        SELECT
+            id,
+            title
+        FROM psk_1.university
+    </select>
+</mapper>

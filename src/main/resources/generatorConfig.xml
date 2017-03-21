@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <context id="StudentsDB" targetRuntime="MyBatis3Simple">
+        <jdbcConnection driverClass="org.postgresql.Driver"
+                        connectionURL="jdbc:postgresql://localhost/postgres"
+                        userId="postgres"
+                        password="qwerty">
+        </jdbcConnection>
+
+        <javaModelGenerator targetPackage="us.martink.mybatis.entities" targetProject="MAVEN" />
+        <sqlMapGenerator targetPackage="us.martink.mybatis.xml" targetProject="MAVEN" />
+        <javaClientGenerator type="XMLMAPPER" targetPackage="us.martink.mybatis.dao" targetProject="MAVEN" />
+
+        <table schema="PSK_1" tableName="university">
+            <generatedKey column="id" identity="true" sqlStatement="JDBC" />
+            <ignoreColumn column="opt_lock_version" />
+        </table>
+        <table schema="PSK_1" tableName="student">
+            <generatedKey column="id" identity="true" sqlStatement="JDBC" />
+            <ignoreColumn column="opt_lock_version" />
+        </table>
+        <table schema="PSK_1" tableName="course">
+            <generatedKey column="id" identity="true" sqlStatement="JDBC" />
+            <ignoreColumn column="opt_lock_version" />
+        </table>
+        <table schema="PSK_1" tableName="student_course">
+        </table>
+    </context>
+</generatorConfiguration>

@@ -12,7 +12,7 @@
         MaxWaitTime = 10 seconds
         MaxIdle = 2
         MinIdle = 1
-        ValidationQuery = SELECT 1 FROM DUAL
+        ValidationQuery = SELECT 1
         TestOnBorrow = true
         TestWhileIdle = true
         TimeBetweenEvictionRuns = 2 min

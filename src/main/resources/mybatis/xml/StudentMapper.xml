@@ -10,7 +10,7 @@
 
         <!-- Rankomis prirašytas ryšiui ManyToOne Student -> University -->
         <!-- Nested result (nėra N+1 select problemos) -->
-        <association property="university" resultMap="lt.vu.usecases.mybatis.dao.UniversityMapper.BaseResultMap"
+        <association property="university" resultMap="us.martink.mybatis.dao.UniversityMapper.BaseResultMap"
                      columnPrefix="university_"/>
 
         <!-- Rankomis prirašytas ryšiui ManyToMany Student - Course -->

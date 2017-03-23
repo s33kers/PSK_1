@@ -10,6 +10,7 @@
     </h:head>
 
     <h:body>
+        <h:link outcome="university">Create new university (DAO with JPA)</h:link><br/>
         <h1>Request type usecase example (DAO with MyBatis)</h1>
         <h:form>
             <p:fieldset legend="All students" toggleable="true" style="width: 50%">
@@ -56,7 +57,7 @@
                 </tr>
             </table>
 
-            <p:commandButton value="Create student and course"
+            <p:commandButton value="Create student and course. FTW"
                              actionListener="#{indexVm.createStudent()}"
                              ajax="false"/>
 

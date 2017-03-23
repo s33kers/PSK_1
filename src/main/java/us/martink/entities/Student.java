@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "STUDENT")
+@Table(name = "STUDENT", schema = "psk_1")
 @NamedQueries({
         @NamedQuery(name = "Student.findAll", query = "SELECT s FROM Student s"),
         @NamedQuery(name = "Student.findById", query = "SELECT s FROM Student s WHERE s.id = :id"),
